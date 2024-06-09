@@ -1,0 +1,19 @@
+When ButtonOn.Click:
+    Call Fingerprint1.StartAuthentication
+
+When Fingerprint1.GotAuthenticated(success):
+    If success:
+        Call BluetoothClient1.SendText "1"
+        Set LabelStatus.Text to "LED and Buzzer ON"
+    Else:
+        Set LabelStatus.Text to "Authentication Failed"
+
+When ButtonOff.Click:
+    Call Fingerprint1.StartAuthentication
+
+When Fingerprint1.GotAuthenticated(success):
+    If success:
+        Call BluetoothClient1.SendText "0"
+        Set LabelStatus.Text to "LED and Buzzer OFF"
+    Else:
+        Set LabelStatus.Text to "Authentication Failed"
