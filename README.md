@@ -1,7 +1,9 @@
-Aim
+Aim:
+
 To develop an Android application that uses fingerprint authentication to securely control an LED and a buzzer connected to an Arduino via Bluetooth.
 
-Components Needed
+Components Needed:
+
 Arduino Uno or compatible board
 Bluetooth module (e.g., HC-05 or HC-06)
 LED
@@ -10,13 +12,15 @@ Resistors (220Ω for the LED)
 Breadboard and jumper wires
 Android smartphone
 MIT App Inventor for app development
-Circuit Diagram
-Here's the connection diagram:
 
+Circuit Diagram:
+
+Here's the connection diagram:
 LED to Arduino:
 
 Connect the anode (long leg) of the LED to Digital Pin 10 via a 220Ω resistor
 Connect the cathode (short leg) of the LED to GND
+
 Buzzer to Arduino:
 
 Connect the positive pin of the buzzer to Digital Pin 11
@@ -27,9 +31,9 @@ VCC to 5V on Arduino
 GND to GND on Arduino
 TXD to Digital Pin 9 (Arduino RX)
 RXD to Digital Pin 8 (Arduino TX)
-Arduino Code
-cpp
-Copy code
+
+Arduino Code.cpp
+
 #include <SoftwareSerial.h>
 
 SoftwareSerial btSerial(8, 9); // RX, TX
@@ -60,7 +64,9 @@ void loop() {
     }
   }
 }
+
 Steps to Create the Android App Using MIT App Inventor
+
 1. Set Up MIT App Inventor
 Open MIT App Inventor: Go to MIT App Inventor and log in with your Google account.
 Start a New Project: Click on "Projects" and then "Start new project". Name your project (e.g., "FingerprintControlApp").
@@ -124,5 +130,7 @@ Upload Arduino Code: Ensure the Arduino code provided is uploaded to your Arduin
 Assemble Circuit: Connect the components as per the provided circuit diagram.
 Pair Bluetooth Module: Pair the Bluetooth module with your Android device.
 Test the App: Use the MIT AI2 Companion app on your Android device to test your app.
+
 Conclusion
+
 By following these steps, you will create an Android application that uses fingerprint authentication to securely control an LED and a buzzer connected to an Arduino via Bluetooth. This ensures that only authenticated users can control the devices.
