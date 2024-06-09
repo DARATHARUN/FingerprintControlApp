@@ -1,0 +1,9 @@
+When ListPicker1.BeforePicking:
+    Call ListPicker1.Elements to BluetoothClient1.AddressesAndNames
+
+When ListPicker1.AfterPicking:
+    Call BluetoothClient1.Connect Address ListPicker1.Selection
+    If BluetoothClient1.IsConnected:
+        Set LabelStatus.Text to "Connected to " + ListPicker1.Selection
+    Else:
+        Set LabelStatus.Text to "Connection Failed"
